@@ -109,7 +109,7 @@ exports.likedOrDisliked = (req, res, ext) => {
           }
         )
           .then(() =>
-            res.status(200).json({ message: "Vous aimez cette sauce !" })
+            res.status(200).json({ message: "Vous aimez cette sauce !" }),
           )
           .catch((error) => res.status(400).json({ error }));
         break;

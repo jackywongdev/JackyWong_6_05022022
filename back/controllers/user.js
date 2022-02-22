@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user')
 const jwt = require('jsonwebtoken');
 
+// Utilisation de bcrypt pour hash les mdp pour les stocker de façon sécuriser dans la base de données   
 
 //Création d'un compte utilisateur
 
