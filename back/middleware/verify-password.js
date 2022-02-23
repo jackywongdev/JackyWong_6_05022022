@@ -1,3 +1,6 @@
+
+// passwordValidator nous permet de creer des rêgles pour renforcer la force des mots de passe utilisateur
+
 const passwordSchema = require('../models/password-validator');
 
 module.exports = (req, res, next) => {

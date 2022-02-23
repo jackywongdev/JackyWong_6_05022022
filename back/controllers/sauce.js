@@ -34,7 +34,7 @@ exports.getAllSauce = (req, res, next) => {
 // Afficher une seul sauce
 
 exports.getOneSauce = (req, res, next) => {
-  // pour afficher une sauce spécifique on utilise la méthode  de mongoDB avec comme paramètre son id(sauce)
+  // pour afficher une sauce spécifique on utilise la méthode  de mongoDB avec comme paramètre son id(sauce) findOne()
   Sauce.findOne({
     _id: req.params.id,
   })
@@ -48,7 +48,7 @@ exports.getOneSauce = (req, res, next) => {
     });
 };
 
-// Modifier une sauce
+// Modifier une sauce avec la méthode updateOne()
 
 exports.modifySauce = (req, res, next) => {
   const sauceObject = req.file
@@ -71,7 +71,7 @@ exports.modifySauce = (req, res, next) => {
 // Supprimer une sauce
 
 exports.deleteSauce = (req, res, next) => {
-  // pour supprimer une sauce seul l'utilisateur qui a créer au préalable cette sauce peux la supprimer, reconnu par son id
+  // pour supprimer une sauce seul l'utilisateur qui a créer au préalable cette sauce peux la supprimer, reconnu par son id avec deleteOne()
   Sauce.findOne({ _id: req.params.id })
     .then((sauce) => {
       // l'image doit elle également êtres retirer du dossier images 

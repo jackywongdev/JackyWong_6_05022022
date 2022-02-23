@@ -39,10 +39,9 @@ app.use(bodyParser.json());
 
 
 
-// Différentes routes utilisé
-
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
+// Différentes routes utilisé
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);
 
